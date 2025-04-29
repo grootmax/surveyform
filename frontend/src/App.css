@@ -1,0 +1,295 @@
+/* General App Layout */
+.App {
+  max-width: 960px; /* Limit content width */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Basic Navigation Styling */
+nav {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Add active class handling if needed */
+  background-color: #ddd;
+  color: #000;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+/* Basic Form Styling (can be overridden by specific components) */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"], /* Add other types as needed */
+textarea,
+select {
+  width: 100%; /* Make inputs take full width of container */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical; /* Allow vertical resize */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 10px; /* Add some space between buttons */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.danger { /* Style for remove/delete buttons */
+    background-color: #dc3545;
+}
+button.danger:hover {
+    background-color: #c82333;
+}
+
+/* Utility Classes (Optional) */
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+
+/* Component Specific Styles Will Go Below */
+
+/* Form Builder Styles */
+.form-builder-page h2,
+.form-builder-page h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.form-builder-page .form-meta {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.question-editor {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.question-editor h4 {
+    margin-top: 0;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.question-editor .options-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.question-editor .options-section h5 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.question-editor .option-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.question-editor .option-item input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0; /* Override default margin */
+    margin-right: 10px;
+}
+
+.question-editor .option-item button {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    background-color: #6c757d; /* Secondary color */
+}
+.question-editor .option-item button:hover {
+    background-color: #5a6268;
+}
+
+.question-editor button.add-option-btn {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    background-color: #28a745; /* Success color */
+}
+.question-editor button.add-option-btn:hover {
+    background-color: #218838;
+}
+
+.question-editor .remove-question-btn {
+    margin-top: 15px;
+    float: right; /* Position remove button */
+}
+
+
+/* Form Filler Styles */
+.form-filler-page h2 {
+    color: #2c3e50;
+}
+.form-filler-page p {
+    color: #555;
+}
+
+.form-filler-page .question-item {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.form-filler-page .question-item label.question-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px; /* Space between question text and input */
+    display: block;
+}
+
+.form-filler-page .question-item input[type="radio"],
+.form-filler-page .question-item input[type="checkbox"] {
+    width: auto; /* Override default width */
+    margin-right: 8px;
+}
+.form-filler-page .question-item div label { /* Labels for radio/checkbox options */
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/* Form Responses Styles */
+.form-responses-page h2, .form-responses-page h3 {
+    color: #2c3e50;
+}
+.form-responses-page > p { /* Description */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.response-item {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.response-item h4 {
+    margin-top: 0;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.response-item .submission-time {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.response-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.response-item li {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #eee;
+}
+.response-item li:last-child {
+    border-bottom: none;
+}
+
+.response-item li strong {
+    color: #444;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
